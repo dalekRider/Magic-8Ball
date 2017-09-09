@@ -23,6 +23,6 @@ It's extremely tough for me to be able to tinker on these while working long/lat
 
 Thanks for looking and Good luck out there!</p>
 
-<h3>Johnathan Mercier - The Dalek Rider</h3>
+<strong>Johnathan Mercier</strong>
 
 

@@ -13,15 +13,18 @@ The second version is a more interactive iteration of the script. I wrapped it u
 <ul>
   <li>Use forms instead of prompts</li>
   <li>Responses returned through updated DOM on page instead of alerts</li>
-  <li>Styled Page</li>
-  <li>Eliminate need for console</li>
+  <li><del>Styled Page</del></li>
+  <li><del>Eliminate need for console</del></li>
   <li>Possible Animations</li>
   <li>Possibly allow option to change theme based responses (ex: Klingon, Cat, Bromodo Dragon...)</li>
 </ul>
 <br />
-It's extremely tough for me to be able to tinker on these while working long/late hours at a lab, being a father and a husband, and trying to get caught up on a decade of tech that whizzed by me when I wasn't looking. I just ask to hang in there. I will get to these. Right now I am focused on getting projects started and learning everything out there. 
 
 Thanks for looking and Good luck out there!</p>
+
+<h4>Update 1/15/2018</h4>
+
+Created a minimally style index page to run the script. I added an event listener to a button to call the script. It currently still used prompts and alerts but this will change over time. 
 
 <strong>Johnathan Mercier</strong>
 

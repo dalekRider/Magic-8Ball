@@ -1,3 +1,4 @@
+let getFortune = document.getElementById('tellMe');
 
 const magicEightBallSays = function() {
 
@@ -34,8 +35,19 @@ switch(randomNumber) {
     break;
 }
 
-window.alert(userName + ' has asked: ' + userQuestion);
-window.alert('The Magic 8Ball says: ' + eightBall +'.')
+  if(userQuestion == ''){
+    window.alert('Refresh the browser and try again')
+  } else {
+    window.alert(userName + ' has asked: ' + userQuestion);
+    window.alert('The Magic 8Ball says: ' + eightBall +'.');
+  }
+
 };
 
-magicEightBallSays();
+//magicEightBallSays();
+
+let runFortune = function() {
+  magicEightBallSays();
+};
+
+getFortune.addEventListener('click', runFortune);

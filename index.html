@@ -9,14 +9,25 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <main class="browserdamus">
+  <main class="browserdamus" role="main">
     <div class="browserdamus__header">
-      <h1>Ask the  Magic 8.. erm Magic Browser Prompt</h1>
+      <h1>Ask the  Magic 8.. erm Magic Browser</h1>
     </div>
     <div class="browserdamus__body">
-      <p>A simple fortune telling script. Click the button below and follow the prompts. Good Luck!</p>
-      <button id="tellMe">Start</button>
+      <div class="browserdamus__app">
+        <h2>Clear Your Mind</h2> 
+        <p>A simple fortune telling script. Ask the browser and it will clear the path.</p>
+        <div class="browserdamus__form">
+          <input type="text" class="js-browserdamus-input">
+          <button id="tellMe">Tell Me</button>
+        </div>
+      </div>
+      <div class="browserdamus__sidebar">
+        <h2>How did you?</h2>
+        <p>some info will go here about how I did it!</p>
+      </div>
     </div>
+    <footer>my footer info here</footer>
   </main>
   <script src="magicEightBallv2.js"></script>
 </body>

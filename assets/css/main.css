@@ -1,5 +1,14 @@
-*, *:before, *:after {
+
+html {
   box-sizing: border-box;
+  color: #fff;
+  font-family: 'Special Elite', 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -7,10 +16,43 @@
 body {
   background: url(../img/pexels-photo-289367.jpg) bottom fixed no-repeat;
   background-size: cover;
-  color: #fff;
-  font-size: 16px;
-  font-family: 'Special Elite', 'Times New Roman', serif;
+  background-color: #000;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cabin Sketch', Arial, sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+p {
+  word-spacing: .08rem;
+  margin-top: .5rem;
+}
+
+/* 
+
+Main grid - lays out header, body, and footer
+** auto forces header/footer to only occupy required space, 1fr for body forces body to occupy remaining space > cheap and dirty sticky footer **
+
+*/
 
 main {
   background-color: rgba(0, 0, 0, 0.5);
@@ -18,48 +60,97 @@ main {
   max-width: 1100px;
   margin: 2.5rem auto;
   min-height: 85vh;
-}
-
-h1 {
-  font-size: 2.75rem;
-  font-family: 'Cabin Sketch', Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 2.5rem 2.5rem 1.5rem;
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  grid-template-rows: auto 1fr auto;
 }
 
 .browserdamus__header {
-  text-align: center;
-  padding: 1.5rem 2.5rem;
+  align-self: center;
+  justify-self: center;
+  padding: 1.5rem 0;
 }
 
 .browserdamus__body {
-  text-align: center;
-  color: #bbb;
-  padding: 0 2.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 3fr minmax(340px, 1fr);
+}
+
+.browserdamus__app {
+  padding: 0 1.5rem;
+}
+
+.browserdamus__results {
+  min-height: 120px;
+  margin-top:  1.5rem;
+}
+
+.browserdamus__sidebar {
+  padding: 0 1.5rem;
+}
+
+footer {
+  padding: 0.5rem 0;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 3.5rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Components */
+
+button, input {
+  outline: none;
+  border-radius: 3px;
+  padding: .25rem 0;
+  margin-top: 1.5rem;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border: 1px #fff solid;
+  min-width: 75%;
+  margin-right: .15rem;
+  padding-left: .5rem;
 }
 
 button {
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  background-color: rgba(240, 248, 255, 0.4);
-  font-family: 'Cabin Sketch', Arial, sans-serif;
-  padding: 1.25rem 3.5rem;
-  margin-top: 1.5rem;
-  border-radius: 50%;
-  box-shadow:
-    2px -2px 12px 3px rgba(240, 248, 255, 0.1),
-    -2px 2px 12px 3px rgba(240, 248, 255, 0.1),
-    -2px -2px 12px 3px rgba(240, 248, 255, 0.1),
-    2px 2px 12px 3px rgba(240, 248, 255, 0.1);
-  font-size: 1.75rem;
-  color: rgba(0, 0, 0, 0.6);
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-button:hover {
-  background-color: rgba(240, 248, 255, 1);
-  box-shadow:
-    2px -2px 16px 7px rgba(240, 248, 255, 0.3),
-    -2px 2px 16px 7px rgba(240, 248, 255, 0.3),
-    -2px -2px 16px 7px rgba(240, 248, 255, 0.3),
-    2px 2px 16px 7px rgba(240, 248, 255, 0.3);
+
+/* Media Queries Funtime Below */
+
+@media (max-width: 1028px) {
+ .browserdamus__body {
+   grid-template-columns: 1fr;
+   grid-row-gap: 1.5rem;
+ }
+}
+
+@media (max-width: 680px) {
+  input {
+    width: 100%;
+  }
+  button {
+    margin-top: 5px;
+  }
+  footer {
+    grid-template-columns: auto;
+    justify-items: center;
+    align-self: end;
+    grid-gap: .125rem;
+  }
 }

@@ -1,4 +1,5 @@
 let getFortune = document.getElementById('tellMe');
+let getQuestion = document.querySelector('.js-browserdamus-input').value.toLowerCase();
 
 const magicEightBallSays = function() {
 
@@ -51,3 +52,4 @@ let runFortune = function() {
 };
 
 getFortune.addEventListener('click', runFortune);
+

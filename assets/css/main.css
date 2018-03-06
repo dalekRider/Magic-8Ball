@@ -44,6 +44,7 @@ a:hover {
 
 p {
   word-spacing: .08rem;
+  margin-top: .5rem;
 }
 
 /* 
@@ -81,6 +82,11 @@ main {
   padding: 0 1.5rem;
 }
 
+.browserdamus__results {
+  min-height: 120px;
+  margin-top:  1.5rem;
+}
+
 .browserdamus__sidebar {
   padding: 0 1.5rem;
 }
@@ -89,10 +95,62 @@ footer {
   padding: 0.5rem 0;
   align-self: center;
   justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 3.5rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
 }
+
+/* Components */
 
 button, input {
   outline: none;
+  border-radius: 3px;
+  padding: .25rem 0;
+  margin-top: 1.5rem;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border: 1px #fff solid;
+  min-width: 75%;
+  margin-right: .15rem;
+  padding-left: .5rem;
+}
+
+button {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 
+/* Media Queries Funtime Below */
+
+@media (max-width: 1028px) {
+ .browserdamus__body {
+   grid-template-columns: 1fr;
+   grid-row-gap: 1.5rem;
+ }
+}
+
+@media (max-width: 680px) {
+  input {
+    width: 100%;
+  }
+  button {
+    margin-top: 5px;
+  }
+  footer {
+    grid-template-columns: auto;
+    justify-items: center;
+    align-self: end;
+    grid-gap: .125rem;
+  }
+}

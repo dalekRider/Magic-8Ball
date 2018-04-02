@@ -17,16 +17,19 @@
       <div class="browserdamus__app">
         <h2>Clear Your Mind</h2> 
         <p>A simple fortune telling script. Ask the browser and it may or may not clear the path. If the path is unclear, rethink your question and ask again. Good Luck!</p>
-        <div class="browserdamus__form">
+        <form id="browserdamus-js__form" class="browserdamus__form">
           <input type="text" class="js-browserdamus-input">
-          <button id="tellMe">Ask Me</button>
-        </div>
+          <button type="submit" id="tellMe">Ask Me</button>
+        </form>
         <div class="browserdamus__results js-browserdamus-output">
         </div>
       </div>
       <div class="browserdamus__sidebar">
         <h2>How did you?</h2>
-        <p>some info will go here about how I did it! This information will be added after a few more updates have been completed. Currently it is fuctional be requires a few more updates: additional error handling, transitions, minor design/layout tweaks, and fallback added for grid.</p>
+        <p> This page was created after completing a CodeCademy's "Magic-8Ball" Project. The original code for completing that project is available at my <a href="https://github.com/dalekRider/Magic-8Ball">Github Repo</a>.</p>
+        <p>There have been 3 versions of this project. The first was a simple run in console only script. The second version made the project slightly more interactive by including prompts and alerts. The recent version uses a similar script, with some changes.</p>
+        <p>The final iteration still uses a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">switch statement</a> and a random number generator to determine the final outcome, however it now uses a form and displays results in the DOM. Additionally the page is built using new CSS Grid techniques and the final output will include fallback support for users not using current browsers. </p>
+        <p>This script and page is still being refactored and will be updated soon, to make better use of the form, add fallback support. I was going to add a build version with my gulp starter kit, but I've decided to add those from the start of a project or when a complete overhaul is needed.</p>
       </div>
     </div>
     <footer>

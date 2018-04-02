@@ -1,10 +1,10 @@
 console.log('Bleep..Bloop..Blarp ITS WORKING!!! ITS WORKING!!!!');
 
-let getFortune = document.getElementById('tellMe');
+let getFortune = document.getElementById('browserdamus-js__form');
 let getQuestion = document.querySelector('.js-browserdamus-input');
 let askedQuestion = getQuestion.value;
 
-const magicEightBallSays = function () {
+const magicEightBallSays = function() {
   let askedQuestion = getQuestion.value.toLowerCase();
   let output = document.querySelector('.js-browserdamus-output');
   let randomNumber = Math.floor(Math.random() * 7)
@@ -47,9 +47,11 @@ const magicEightBallSays = function () {
 
 //magicEightBallSays();
 
-let runFortune = function () {
+let runFortune = function(e) {
   magicEightBallSays();
+  e.preventDefault();
 };
 
-getFortune.addEventListener('click', runFortune);
+//getFortune.addEventListener('click', runFortune);
+getFortune.addEventListener('submit', runFortune);
 
